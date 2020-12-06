@@ -1,0 +1,31 @@
+<%= render 'components/containers/crud_container' do %>
+  <h1>Students</h1>
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Student ID</th>
+        <th>First name</th>
+        <th>Gender</th>
+        <th>Date of birth</th>
+        <th>Contact number</th>
+        <th>Address</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @students.each do |student| %>
+        <tr>
+          <td><%= link_to student.student_id, student, class: 'text-reset d-block text-decoration-none' %></td>
+          <td><%= link_to student.first_name, student, class: 'text-reset d-block text-decoration-none' %></td>
+          <td><%= link_to student.gender, student, class: 'text-reset d-block text-decoration-none' %></td>
+          <td><%= link_to student.date_of_birth, student, class: 'text-reset d-block text-decoration-none' %></td>
+          <td><%= link_to student.contact_number, student, class: 'text-reset d-block text-decoration-none' %></td>
+          <td><%= link_to student.address, student, class: 'text-reset d-block text-decoration-none' %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <hr>
+<% end %>

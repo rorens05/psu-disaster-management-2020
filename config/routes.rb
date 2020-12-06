@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :students
   get 'profile', to: 'profile#index'
   get 'profile/change_password'
   patch 'profile/update_password'

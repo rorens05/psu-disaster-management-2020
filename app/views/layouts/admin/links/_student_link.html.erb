@@ -1,0 +1,26 @@
+<div class='px-3 link-container <%= @navigation_name == "Student" ? 'active' : '' %>'>
+  <a
+    class='w-100 d-flex align-items-center text-align-left py-2'
+    href='#'
+    data-toggle='collapse'
+    data-target='#students'
+    aria-expanded='true'
+    aria-controls='students'
+  >
+  <i class="fas fa-user-graduate mr-3 icon"></i>
+    Students
+  </a>
+  <div
+    id='students'
+    class='collapse px-5'
+    aria-labelledby='headingOne'
+    data-parent='#accordion'
+  >
+  <a href="/students" class='d-block pl-2 pb-3'>
+    All
+  </a>
+  <a href="/students/new" class='d-block pl-2 pb-3'>
+    New
+  </a>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+<%= render 'components/containers/crud_container' do %>
+  <h3>General Information</h3>
+  <hr>
+  <p>
+    <strong>Student ID:</strong>
+    <%= @student.student_id %>
+  </p>
+
+  <p>
+    <strong>First name:</strong>
+    <%= @student.first_name %>
+  </p>
+
+  <p>
+    <strong>Middle name:</strong>
+    <%= @student.middle_name %>
+  </p>
+
+  <p>
+    <strong>Last name:</strong>
+    <%= @student.last_name %>
+  </p>
+
+  <p>
+    <strong>Gender:</strong>
+    <%= @student.gender %>
+  </p>
+
+  <p>
+    <strong>Date of birth:</strong>
+    <%= @student.date_of_birth %>
+  </p>
+
+  <p>
+    <strong>Contact number:</strong>
+    <%= @student.contact_number %>
+  </p>
+
+  <p>
+    <strong>Address:</strong>
+    <%= @student.address %>
+  </p>
+
+  <%= link_to 'Edit', edit_student_path(@student) , class: 'btn btn-sm btn-success mr-1'%> 
+  <%= link_to 'Destroy', @student, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %>
+<% end %>
