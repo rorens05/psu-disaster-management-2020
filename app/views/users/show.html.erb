@@ -15,7 +15,6 @@
         <strong>Address:</strong>
         <%= @user.address %>
       </p>
-
       <%= link_to 'Edit', edit_user_path(@user), class: 'btn btn-success btn-sm mr-2' %> 
       <%= link_to 'Destroy', @user, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %>
     </div>
@@ -25,6 +24,4 @@
       <% end %>
     </div>
   </div>
-
-  
 <% end %>
