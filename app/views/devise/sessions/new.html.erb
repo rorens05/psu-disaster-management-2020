@@ -1,4 +1,4 @@
-<div class="container-fluid login-page position-relative">
+<div class="container-fluid login-page position-relative mt-5">
   <div class="row">
     <div class="col-sm-6 py-5 px-5">
       <div class="heading-container  pl-md-5 mt-5">
@@ -15,12 +15,10 @@
           <p class="text-danger"><%= alert %></p>
         <% end %>
         
-        
         <% if notice.present? %>
           <p class="text-success"><%= notice %></p>
         <% end %>
         
-
         <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <div class="form-inputs">
             <%= f.input :email,
@@ -33,7 +31,7 @@
             <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
           </div>
           <div class="form-actions">
-            <%= f.button :submit, "Log in", class: 'btn btn-primary' %>
+            <%= f.button :submit, "Log in", class: 'btn btn-primary rounded-pill px-5 d-block mx-auto' %>
           </div>
         <% end %>
       </div>

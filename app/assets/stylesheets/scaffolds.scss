@@ -4,3 +4,63 @@
   background-color: $primary_color;
   border: 1px solid $primary_color;
 }
+
+.dashboard-container{
+  height: 100vh;
+  display: flex;
+
+  .sidebar{
+    width: 260px;
+    overflow: hidden;
+    height: 100vh;
+    background-image: linear-gradient($white, #F4F4FC, $primary_color);
+
+    .logo{
+      img{
+        width: 80%;
+        display: block;
+        margin: 8px auto
+      }
+    }
+
+    .link-container{
+      a{
+        color: $primary_color;
+        text-decoration: none;
+        padding-left: 20px;
+      }
+
+      a:hover{
+        color: $primary_color_low !important;
+      }
+      div{
+        margin-top: 8px;
+      }
+    }
+
+    .link-container.active, .link-container:hover{
+      background-color: $primary_color;
+      a{
+        color: $white;
+      }
+    }
+  }
+
+  .content{
+    width: 100%;
+    overflow: auto;
+    background-color: #E2E7F3;
+    
+    strong {
+      display: inline-block;
+      width: 150px !important;
+    }
+        
+    .form-sm {
+      width: 100%;
+      max-width: 480px;
+      padding: 15px;
+      margin: 0 auto;
+    }
+  }
+}

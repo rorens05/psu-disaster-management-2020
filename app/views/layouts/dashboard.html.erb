@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PngtekRailsTemplate</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/f1752edda4.js" crossorigin="anonymous"></script>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    
+    <div class="dashboard-container">
+      <%= render 'layouts/global/sidebar' %>
+      <div class="content">
+      
+        <% if alert.present? %>
+        
+          <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <%= alert %>            
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <p class="text-danger"></p>
+        <% end %>
+        
+        <% if notice.present? %>
+          <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <%= notice %>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <p class="text-success"><%= notice %></p>
+        <% end %>
+
+        <%= yield %>      
+      </div>
+    </div>
+
+  </body>
+</html>

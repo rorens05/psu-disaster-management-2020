@@ -1,0 +1,21 @@
+<%= render 'components/containers/crud_container' do %>
+  <h3>General Information</h3>
+  <hr>
+  <p>
+    <strong>Email:</strong>
+    <%= @user.email %>
+  </p>
+
+  <p>
+    <strong>Name:</strong>
+    <%= @user.name %>
+  </p>
+
+  <p>
+    <strong>Address:</strong>
+    <%= @user.address %>
+  </p>
+
+  <%= link_to 'Edit', edit_user_path(@user), class: 'btn btn-success btn-sm mr-2' %> 
+<%= link_to 'Destroy', @user, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %>
+<% end %>
