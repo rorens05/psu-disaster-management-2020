@@ -71,7 +71,7 @@ class UsersController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def user_params
-    params.require(:user).permit(:email, :name, :address)
+    params.require(:user).permit(:email, :name, :address, :image)
   end
 
   def set_navigation_name
