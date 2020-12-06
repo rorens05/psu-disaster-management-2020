@@ -3,6 +3,28 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.2'
 
+# image and file storage for aws
+gem "aws-sdk-s3", require: false
+# pry for easier debugging
+gem "pry", "~> 0.12.2"
+# Use awesome print for formating data in rails console
+gem "awesome_print", require: "ap"
+# Required library for devise
+gem "omniauth", ">= 1.0.0"
+# Authentication gem for rails
+gem "devise"
+# date grouping for dashboard
+gem "groupdate", "~> 2.5", ">= 2.5.2"
+# cancancan for user authorization
+gem "cancancan"
+# pagination
+gem "kaminari"
+# to process excel and csv files
+gem "roo"
+# create dummy data
+gem "faker", :git => "https://github.com/faker-ruby/faker.git", :branch => "master"
+# simple form for ready to used styled inputs
+gem "simple_form"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
 # Use mysql as the database for Active Record

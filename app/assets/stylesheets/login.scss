@@ -1,0 +1,32 @@
+@import "constants";
+
+.login-page{
+  height: 100vh;
+  background-image: linear-gradient($white, #F4F4FC, $primary_color);
+
+
+  .heading-container{
+    h3,p{
+      color: $primary_text_color;
+    }
+  }
+  
+  .login-container{
+    width: 100%;
+    max-width: 350px;
+
+    .logo{
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+
+  .login-footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0
+  }
+}
