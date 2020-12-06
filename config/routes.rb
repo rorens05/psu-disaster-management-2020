@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :messages
+  resources :announcements
   resources :students
   get 'profile', to: 'profile#index'
   get 'profile/change_password'

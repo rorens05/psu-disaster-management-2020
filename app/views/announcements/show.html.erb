@@ -1,0 +1,14 @@
+<%= render 'components/containers/crud_container' do %>
+  <h3>General Information</h3>
+  <hr>
+  <p>
+    <strong>Title:</strong>
+    <%= @announcement.title %>
+  </p>
+  <p>
+    <strong>Description:</strong>
+    <%= @announcement.description %>
+  </p>
+  <%= link_to 'Edit', edit_announcement_path(@announcement), class: 'btn btn-success btn-sm mr-1'%> 
+  <%= link_to 'Destroy', @announcement, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %>
+<% end %>

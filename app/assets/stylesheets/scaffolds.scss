@@ -32,7 +32,7 @@
 
       .icon{
         display: inline-block;
-        width: 40px;
+        width: 10px;
         height: 40px;
         display: flex;
         justify-content: center;
@@ -46,7 +46,7 @@
       div{
         margin-top: 4px;
         a{
-          margin-left: 20px;
+          margin-left: -10px;
         }
       }
     }
@@ -93,8 +93,9 @@
         padding: 0 16px;
 
         .nav-logo{
-          width: 40px;
-          height:40px;
+          border: 2px solid white;
+          width: 30px;
+          height:30px;
           border-radius: 100px;
         }
       }

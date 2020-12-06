@@ -1,6 +1,4 @@
-<h1>Editing Student</h1>
-
-<%= render 'form', student: @student %>
-
-<%= link_to 'Show', @student %> |
-<%= link_to 'Back', students_path %>
+<%= render 'components/containers/crud_form_container' do %>
+  <h1>Edit Student</h1>
+  <%= render 'form', student: @student %>
+<% end %>

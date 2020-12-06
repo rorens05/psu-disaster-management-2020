@@ -1,0 +1,22 @@
+<%= render 'components/containers/crud_container' do %>
+  <h1>Announcements</h1>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Date Created</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @announcements.each do |announcement| %>
+        <tr>
+          <td><%= link_to announcement.title, announcement, class: 'text-reset d-block text-decoration-none'  %></td>
+          <td><%= link_to announcement.description, announcement, class: 'text-reset d-block text-decoration-none'  %></td>
+          <td><%= link_to format_date(announcement.created_at), announcement, class: 'text-reset d-block text-decoration-none'  %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+<% end %>
