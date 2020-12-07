@@ -3,28 +3,30 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.2'
 
+# cors for api
+gem 'rack-cors'
 # image and file storage for aws
-gem "aws-sdk-s3", require: false
+gem 'aws-sdk-s3', require: false
 # pry for easier debugging
-gem "pry", "~> 0.12.2"
+gem 'pry', '~> 0.12.2'
 # Use awesome print for formating data in rails console
-gem "awesome_print", require: "ap"
+gem 'awesome_print', require: 'ap'
 # Required library for devise
-gem "omniauth", ">= 1.0.0"
+gem 'omniauth', '>= 1.0.0'
 # Authentication gem for rails
-gem "devise"
+gem 'devise'
 # date grouping for dashboard
-gem "groupdate", "~> 2.5", ">= 2.5.2"
+gem 'groupdate', '~> 2.5', '>= 2.5.2'
 # cancancan for user authorization
-gem "cancancan"
+gem 'cancancan'
 # pagination
-gem "kaminari"
+gem 'kaminari'
 # to process excel and csv files
-gem "roo"
+gem 'roo'
 # create dummy data
-gem "faker", :git => "https://github.com/faker-ruby/faker.git", :branch => "master"
+gem 'faker', git: 'https://github.com/faker-ruby/faker.git', branch: 'master'
 # simple form for ready to used styled inputs
-gem "simple_form"
+gem 'simple_form'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
 # Use mysql as the database for Active Record
@@ -52,13 +54,13 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
 end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.2'
+  gem 'web-console', '>= 3.3.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
@@ -73,4 +75,4 @@ group :test do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
