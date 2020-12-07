@@ -9,15 +9,25 @@
   height: 100vh;
   display: flex;
 
+  .sidebar-hidden{
+    margin-left: -260px;
+  }
+
   .sidebar{
     width: 260px;
     overflow: hidden;
     height: 100vh;
     background-image: linear-gradient($white, #F4F4FC, $primary_color);
 
+    
+    -webkit-transition: all .20s ease-out;
+    -moz-transition: all .20s ease-out;
+    -o-transition: all .20s ease-out;
+    transition: all .20s ease-out;
+
     .logo{
       img{
-        width: 80%;
+        width: 100px;
         display: block;
         margin: 8px auto
       }
