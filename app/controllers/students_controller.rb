@@ -26,7 +26,8 @@ class StudentsController < ApplicationController
   # POST /students.json
   def create
     @student = Student.new(student_params)
-
+    @student.password = 'Password@123'
+    @student.password_confirmation = 'Password@123'
     respond_to do |format|
       if @student.save
         format.html { redirect_to @student, notice: 'Student was successfully created.' }

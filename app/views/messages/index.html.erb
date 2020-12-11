@@ -6,6 +6,7 @@
         <th>Recipient</th>
         <th>Content</th>
         <th>Student</th>
+        <th>Message Type</th>
       </tr>
     </thead>
     <tbody>
@@ -14,6 +15,7 @@
           <td><%= link_to message.recipient, message, class: 'text-reset d-block text-decoration-none' %></td>
           <td><%= link_to message.content, message, class: 'text-reset d-block text-decoration-none' %></td>
           <td><%= link_to message.student.name, message, class: 'text-reset d-block text-decoration-none' %></td>
+          <td><%= link_to message.message_type || Message::message_types.keys.first, message, class: 'text-reset d-block text-decoration-none' %></td>
         </tr>
       <% end %>
     </tbody>

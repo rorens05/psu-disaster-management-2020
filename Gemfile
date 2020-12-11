@@ -3,6 +3,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.2'
 
+# API Authorization
+gem 'bcrypt', '~> 3.1.7'
+# jwt for api token encryption
+gem 'jwt'
 # cors for api
 gem 'rack-cors'
 # image and file storage for aws

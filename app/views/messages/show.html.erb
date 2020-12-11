@@ -12,6 +12,16 @@
   </p>
 
   <p>
+    <strong>Message Type:</strong>
+    <%= @message.message_type || Message::message_types.keys.first %>
+  </p>
+
+  <p>
+    <strong>Sent at:</strong>
+    <%= format_date @message.created_at %>
+  </p>
+
+  <p>
     <strong>Student:</strong>
     <%= link_to @message.student.name, @message.student %>
   </p>
