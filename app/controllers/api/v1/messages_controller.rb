@@ -4,6 +4,7 @@ class Api::V1::MessagesController < Api::V1::ApiController
     message = Message.new(message_params)
     message.student_id = @user.id
     message.message_type = 0
+    message.message_type = message_params[:message_type] if message_params[:message_type].present?
     if message.save
       render json: message, status: :ok
     else
@@ -16,7 +17,8 @@ class Api::V1::MessagesController < Api::V1::ApiController
   def message_params
     params.require(:message).permit(
       :recipient,
-      :content
+      :content,
+      :message_type
     )
   end
 end
