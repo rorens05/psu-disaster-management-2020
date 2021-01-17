@@ -5,6 +5,7 @@ class Message < ApplicationRecord
   enum message_type: ['Reqular Message', 'SOS']
 
   def location
+    return nil if content.nil?
     return nil unless json?(content)
 
     content_json = JSON.parse(content)
@@ -23,6 +24,7 @@ class Message < ApplicationRecord
   end
 
   def longitude
+    return nil if content.nil?
     return nil unless json?(content)
 
     content_json = JSON.parse(content)
