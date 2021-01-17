@@ -12,7 +12,7 @@
       <% @messages.each do |message| %>
         <tr>
           <td><%= link_to message.recipient, message, class: 'text-reset d-block text-decoration-none' %></td>
-          <td><%= link_to "SOS Message", message, class: 'text-reset d-block text-decoration-none' %></td>
+          <td><%= link_to message.message_type, message, class: 'text-reset d-block text-decoration-none' %></td>
           <td><%= link_to message.student.name, message, class: 'text-reset d-block text-decoration-none' %></td>
         </tr>
       <% end %>
