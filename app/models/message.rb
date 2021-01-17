@@ -15,6 +15,7 @@ class Message < ApplicationRecord
   end
 
   def latitude
+    return nil if content.nil?
     return nil unless json?(content)
 
     content_json = JSON.parse(content)
