@@ -8,6 +8,11 @@ class MessagesController < ApplicationController
   # GET /messages.json
   def index
     @messages = Message.all.order(created_at: :desc)
+    @messages = if params[:sos].present?
+                  @messages.where(message_type: 'SOS')
+                else
+                  @messages.where(message_type: 'Reqular Message')
+                end
   end
 
   # GET /messages/1

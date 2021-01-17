@@ -3,7 +3,7 @@ module ApplicationHelper
     return date if date.nil?
 
     begin
-      date.to_date.strftime('%I:%M %p')
+      date.strftime('%I:%M %p')
     rescue ArgumentError
       'Not available'
     end

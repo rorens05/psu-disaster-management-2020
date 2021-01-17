@@ -1,22 +1,22 @@
-<div class='px-3 link-container <%= @navigation_name == "Message" && params[:sos].blank? ? 'active' : '' %>'>
+<div class='px-3 link-container <%= params[:sos].present? ? 'active' : '' %>'>
   <a
     class='w-100 d-flex align-items-center text-align-left py-2'
     href='#'
     data-toggle='collapse'
-    data-target='#message'
+    data-target='#sos'
     aria-expanded='true'
-    aria-controls='message'
+    aria-controls='sos'
   >
-  <i class="fas fa-envelope mr-3 icon"></i>
-    Messages
+  <i class="fas fa-exclamation-triangle mr-3 icon"></i>
+    SOS
   </a>
   <div
-    id='message'
+    id='sos'
     class='collapse px-5'
     aria-labelledby='headingOne'
     data-parent='#accordion'
   >
-  <a href="/messages" class='d-block pl-2 pb-3'>
+  <a href="/messages?sos=1" class='d-block pl-2 pb-3'>
     All
   </a>
   <a href="/messages/new" class='d-block pl-2 pb-3'>
