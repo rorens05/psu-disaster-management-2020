@@ -110,6 +110,7 @@ GEM
       warden (~> 1.2.3)
     erubi (1.10.0)
     ffi (1.13.1)
+    geocoder (1.6.4)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     groupdate (2.5.3)
@@ -278,6 +279,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   devise
   faker!
+  geocoder (~> 1.3, >= 1.3.7)
   groupdate (~> 2.5, >= 2.5.2)
   jbuilder (~> 2.7)
   jwt

@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.2'
 
+# Geocoder for decoding lat long
+gem 'geocoder', '~> 1.3', '>= 1.3.7'
 # API Authorization
 gem 'bcrypt', '~> 3.1.7'
 # jwt for api token encryption

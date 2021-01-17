@@ -7,8 +7,13 @@
   </p>
 
   <p>
-    <strong>Content:</strong>
-    <%= @message.content %>
+    <% if @message.location.present? %>
+      <strong>Location:</strong>
+      <%= link_to @message.location.display_name, "http://www.google.com/maps/place/#{@message.latitude},#{@message.longitude}"  %>
+    <% else %>
+      <strong>Content:</strong>
+      <%= @message.content %>
+    <% end %>
   </p>
 
   <p>

@@ -11,7 +11,7 @@ class MessagesController < ApplicationController
     @messages = if params[:sos].present?
                   @messages.where(message_type: 'SOS')
                 else
-                  @messages.where(message_type: 'Reqular Message')
+                  @messages.where.not(message_type: 'SOS')
                 end
   end
 
@@ -31,7 +31,7 @@ class MessagesController < ApplicationController
   # POST /messages.json
   def create
     @message = Message.new(message_params)
-
+    @message.message_type = 'Reqular Message  `'
     respond_to do |format|
       if @message.save
         format.html { redirect_to @message, notice: 'Message was successfully created.' }
